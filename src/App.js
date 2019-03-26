@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.scss';
+import Router from './router'
 
 class App extends Component {
   render() {
@@ -8,6 +9,7 @@ class App extends Component {
         <header>
           相聚一堂
         </header>
+        {Router}
       </div>
     );
   }
