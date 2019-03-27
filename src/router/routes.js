@@ -1,9 +1,9 @@
-import Home from '../pages/home'
+import Home from '~/pages/home'
 import load from './load';
 
 const routes = [
   {
-    component: load(() => import('../layouts')),
+    component: load(() => import('~/layouts')),
     routes: [
       {
         path: "/",
