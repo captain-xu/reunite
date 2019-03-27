@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
+import 'antd/dist/antd.css';
+import Router from './router'
 
 class App extends Component {
   render() {
@@ -8,6 +10,7 @@ class App extends Component {
         <header>
           相聚一堂
         </header>
+        {Router}
       </div>
     );
   }
