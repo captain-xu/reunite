@@ -54,23 +54,12 @@ client.interceptors.response.use(
 export const Request = (config) => {
   return client.request(config)
     .then(response => {
-
       if (response.status === 200 || response.status === 204) {
         return response.data
-      }
-      else if (response.status === 401) {
-
-        let { casLoginUrl, appSecurityUrl, appRedirectParameter, casServiceParameter } = response.data.data;
-        let encodeUrl = `${appSecurityUrl}?${appRedirectParameter}=${encodeURIComponent(window.location.href)}`;
-        let loginUrl = `${casLoginUrl}?${casServiceParameter}=${encodeURIComponent(encodeUrl)}`;
-        window.open(loginUrl, '_self');
-        return;
-
       }
 
       let { code, resultMessage, data } = response.data;
       return Promise.reject(new ApiResultError(code, resultMessage || '服务异常', data))
-
 
     }, err => {
 
