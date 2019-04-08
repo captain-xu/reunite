@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {getData} from '~/api'
 
 const Home = () => {
   const getTitle = () => {
@@ -8,6 +9,7 @@ const Home = () => {
   const [title, setTitle] = useState(getTitle);
 
   useEffect(() => {
+    getData()
     console.log('re-render')
   }, [title]);
 
