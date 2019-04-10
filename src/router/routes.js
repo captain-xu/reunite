@@ -1,5 +1,7 @@
-import Home from '~/pages/home'
 import load from './load';
+
+import Home from '~/pages/home'
+import Create from '~/pages/create'
 
 const routes = [
   {
@@ -9,6 +11,10 @@ const routes = [
         path: "/",
         exact: true,
         component: Home
+      }, {
+        path: "/create",
+        exact: true,
+        component: Create
       }
     ]
   }

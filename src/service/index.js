@@ -76,7 +76,6 @@ export function getApi(url, params = {}) {
 }
 
 export function postApi(url, data = {}) {
-  console.log(url, 'url')
   return Request({
     url,
     method: 'POST',

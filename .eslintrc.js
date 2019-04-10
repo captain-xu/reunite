@@ -2,7 +2,7 @@
  * @Author: Tab
  * @Date: 2018-09-09 21:59:44
  * @Last Modified by: jian.xu
- * @Last Modified time: 2019-03-26 17:37:33
+ * @Last Modified time: 2019-04-10 14:46:39
  */
  module.exports = {
   "env": {
@@ -30,7 +30,8 @@
     "ecmaVersion": 7
   },
   "plugins": [
-    "react"
+    "react",
+    "react-hooks"
   ],
   "rules": {
     "quotes": [0, "single"], //单引号
@@ -111,6 +112,8 @@
     "require-await": 1,//禁止使用不带 await 表达式的 async 函数
     "max-params":[1,4], //最大4个参数
     "prefer-template":1, //使用es6的魔伴
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
   },
   "settings": {
     "import/ignore": [
